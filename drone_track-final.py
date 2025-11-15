@@ -200,8 +200,8 @@ def draw_hud(frame, status, propellers, overall_centroid, roi, rpm):
     cv2.putText(frame, rpm_text, (10, 60), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
 
 def main():
-    # Hardcoded file path
-    dat_file = r"C:\\Users\\Henri\\Downloads\\Junction\\Data\\drone_moving-20251114T191633Z-1-002\\drone_moving\\drone_moving.dat"
+    # Hardcoded file path, CHANGE THIS
+    dat_file = r"C:\\Users\\Henri\\Downloads\\Junction\\Data\\drone_moving-20251114T191633Z-1-002\\drone_moving\\drone_moving.da"
     
     parser = argparse.ArgumentParser(description="Multi-propeller drone tracker.")
     parser.add_argument("--dat", default=dat_file, help="Path to .dat file")
@@ -287,3 +287,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
