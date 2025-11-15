@@ -1,6 +1,5 @@
 # This-wasn-t-a-Pizza-Party---Sensofusion-Challenge
 Code for the Junction 2025 Sensofusion challenge
-# This-wasn-t-a-Pizza-Party — Sensofusion Challenge
 
 This repository contains the code used for the Junction 2025 Sensofusion challenge. The project processes event-camera recordings (Prophesee/Metavision `.dat` files), performs analysis and visualization, and contains helper scripts to run playback and experiments.
 
