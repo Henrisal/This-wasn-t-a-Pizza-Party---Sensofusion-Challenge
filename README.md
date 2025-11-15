@@ -8,6 +8,7 @@ This README explains how the code works at a high level, how to operate it, wher
 Important references
 - evio (used to read `.dat` files): https://github.com/ahtihelminen/evio (see its README for detailed `.dat` format and the provided scripts)
 - Data (Google Drive): https://drive.google.com/drive/folders/18ORzE9_aHABYqOHzVdL0GANk_eIMaSuE
+- Download: drone_moving->drone_moving.dat
 
 Quick overview
 - Input: event-camera recordings in Prophesee/Metavision `.dat` format (binary + ASCII header).
