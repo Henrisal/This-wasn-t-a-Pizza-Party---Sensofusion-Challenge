@@ -25,8 +25,7 @@ Setup / installation
    - Example:
      - repo-root/
        - data/
-         - recording1.dat
-         - recording2.dat
+         - drone_moving.dat
 4. Install dependencies
    - Option A: requirements.txt or pyproject.toml, use:
      python -m venv .venv
@@ -39,19 +38,20 @@ Setup / installation
 
 How the code works (high level)
 1. Read `.dat` files:
+   - REMEMBER TO CHANGE THE FILE PATH IN THE CODE! Line: 204
    - We rely on evio to open and decode the Metavision `.dat` format. evio exposes standardized event packets with arrays:
      - x_coords: uint16
      - y_coords: uint16
      - timestamps: int64 (microseconds)
      - polarities: int8 (0=OFF, 1=ON)
    - The decoder extracts coordinates and polarity from the packed 32-bit word and timestamps from the 32-bit time field (promoted to int64).
-2. Preprocessing:
+3. Preprocessing:
    - Optionally filter or crop events by time range, spatial ROI (x/y ranges), or polarity.
    - Convert events to frame-like slices by grouping events in time windows (sliding or non-overlapping).
-3. Processing / Analysis:
+4. Processing / Analysis:
    - Algorithms operate on event batches or derived frames (e.g., counting events per pixel, motion estimation, heuristics for the Sensofusion challenge).
    - Results can be exported as visualizations (images/animated GIFs/video) or numerical outputs (CSV/NumPy arrays).
-4. Output:
+5. Output:
    - Results are written into an `output/` directory structured by run name or timestamp.
 
 Main file path conventions
